@@ -30,7 +30,26 @@ def sort(width: int, height: int, length: int, mass: int) -> str:
         return "STANDARD"
 
 
+def test_standard_package():
+    print("Testing STANDARD package")
+    assert sort(width=100, height=80, length=25, mass=5) == "STANDARD"
+
+
+def test_special_package():
+    print("Testing SPECIAL package")
+    assert sort(width=100, height=80, length=25, mass=50) == "SPECIAL"
+
+
+def test_rejected_package():
+    print("Testing REJECTED package")
+    assert sort(width=100000, height=80, length=25, mass=100) == "REJECTED"
+
+
 if __name__ == '__main__':
+    test_special_package()
+    test_standard_package()
+    test_rejected_package()
+    
     print(sort(width=100, height=80, length=25, mass=5))  # standard
     print(sort(width=100, height=80, length=25, mass=50))  # special
     print(sort(width=100000, height=80, length=25, mass=100))  # rejected

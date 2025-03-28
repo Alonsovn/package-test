@@ -49,7 +49,10 @@ if __name__ == '__main__':
     test_special_package()
     test_standard_package()
     test_rejected_package()
-    
+
     print(sort(width=100, height=80, length=25, mass=5))  # standard
     print(sort(width=100, height=80, length=25, mass=50))  # special
     print(sort(width=100000, height=80, length=25, mass=100))  # rejected
+
+    # TODO validate package with empty or 0 values
+    print(sort(width=0, height=0, length=0, mass=0))
